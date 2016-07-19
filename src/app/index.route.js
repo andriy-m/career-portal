@@ -8,6 +8,22 @@ function routerConfig($stateProvider, $urlRouterProvider) {
             controller: 'JobListController',
             controllerAs: 'list'
         })
+        
+        // ADDING NEW STATE, URL, AND TEMPLATE FOR A FILTERED JOB LIST
+        .state('tempjobs', {
+            url: '/jobs/Temporary',
+            templateUrl: 'app/list/list2.html',
+            controller: 'JobListController',
+            controllerAs: 'list'
+        })
+        // ADDING NEW STATE, URL, AND TEMPLATE FOR A FILTERED JOB LIST
+         .state('permjobs', {
+            url: '/jobs/Permanent',
+            templateUrl: 'app/list/list3.html',
+            controller: 'JobListController',
+            controllerAs: 'list'
+        })
+
         .state('detail', {
             url: '/jobs/:id',
             templateUrl: 'app/detail/detail.html',
